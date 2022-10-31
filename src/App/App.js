@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { getData } from '../apiCalls/apiCalls';
+
 import './App.css';
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
   useEffect(() => {
     getData()
       .then(reservationsData => {
+        console.log(reservationsData);
         setReservations(reservationsData);
       })
   }, []);
