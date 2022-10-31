@@ -4,6 +4,7 @@ import './Form.css';
 
 class Form extends Component {
   initialState = {
+    id: 0,
     name: '',
     number: 0,
     date: '',
