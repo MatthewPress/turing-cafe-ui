@@ -3,6 +3,14 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+  const [reservations, setReservations] = useState([]);
+
+  useEffect(() => {
+    getData()
+      .then(reservationsData => {
+        setReservations(reservationsData);
+      })
+  }, []);
 
   return (
     <div className="App">
