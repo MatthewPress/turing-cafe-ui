@@ -6,7 +6,7 @@ import './ResyBox.css'
 
 const ResyBox = ({ reservations }) => {
   const cards = reservations.map((reservation) => {
-    return <ResyCard reservation={reservation} />
+    return <ResyCard key={reservation.id} reservation={reservation} />
   })
   
   return (

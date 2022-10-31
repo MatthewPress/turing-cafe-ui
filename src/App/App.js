@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import Form from '../Form/Form';
 import ResyBox from '../ResyBox/ResyBox';
 
 import { getData } from '../apiCalls/apiCalls';
@@ -17,11 +18,15 @@ function App() {
       })
   }, []);
 
+  const handleSubmit = () => {
+    setReservations();
+  }
+
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
       <div className='resy-form'>
-
+        <Form />
       </div>
       <div className='resy-container'>
         <ResyBox reservations={reservations} />
