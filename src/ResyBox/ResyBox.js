@@ -4,11 +4,15 @@ import ResyCard from '../ResyCard/ResyCard';
 
 import './ResyBox.css'
 
-const ResyBox = () => {
-  const cards = <ResyCard />
+const ResyBox = ({ reservations }) => {
+  const cards = reservations.map((reservation) => {
+    return <ResyCard reservation={reservation} />
+  })
   
   return (
-    <p>{cards}</p>
+    <section>
+      {cards}
+    </section>
   );
 }
 

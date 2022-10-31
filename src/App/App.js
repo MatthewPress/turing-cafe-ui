@@ -24,7 +24,7 @@ function App() {
 
       </div>
       <div className='resy-container'>
-        <ResyBox />
+        <ResyBox reservations={reservations} />
       </div>
     </div>
   )
