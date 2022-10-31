@@ -1,10 +1,14 @@
 import React from 'react';
 
+import ResyCard from '../ResyCard/ResyCard';
+
 import './ResyBox.css'
 
 const ResyBox = () => {
+  const cards = <ResyCard />
+  
   return (
-    <p>Hey</p>
+    <p>{cards}</p>
   );
 }
 
