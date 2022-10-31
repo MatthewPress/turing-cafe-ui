@@ -21,6 +21,9 @@ function Form({}) {
       <input 
         type="time"
       />
+      <input
+        type="submit"
+      />
     </form>
   );
 }
