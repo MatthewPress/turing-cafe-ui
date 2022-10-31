@@ -2,9 +2,13 @@ import React from 'react';
 
 import './ResyCard.css';
 
-const ResyCard = () => {
+const ResyCard = ({ reservation }) => {
   return (
-    <p>Hey</p>
+    <article key={reservation.id}>
+      <p>{reservation.name}</p>
+      <p>{reservation.date}</p>
+      <p>{reservation.time}</p>
+    </article>
   )
 }
 
