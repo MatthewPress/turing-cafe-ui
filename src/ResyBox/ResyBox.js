@@ -5,6 +5,7 @@ import ResyCard from '../ResyCard/ResyCard';
 import './ResyBox.css'
 
 const ResyBox = ({ reservations }) => {
+  console.log({reservations})
   const cards = reservations.map((reservation) => {
     return <ResyCard key={reservation.id} reservation={reservation} />
   })

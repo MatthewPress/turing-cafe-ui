@@ -13,20 +13,24 @@ function App() {
   useEffect(() => {
     getData()
       .then(reservationsData => {
-        console.log(reservationsData);
+        console.log({reservationsData});
         setReservations(reservationsData);
       })
   }, []);
 
-  const handleSubmit = () => {
-    setReservations();
+  const handleSubmit = (newReservation) => {
+    setReservations((reservations) => ([
+      ...reservations,
+      newReservation
+    ]));
+    console.log({reservations});
   }
 
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
       <div className='resy-form'>
-        <Form />
+        <Form handleSubmit={handleSubmit} />
       </div>
       <div className='resy-container'>
         <ResyBox reservations={reservations} />
