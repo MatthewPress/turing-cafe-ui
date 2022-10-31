@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import ResyBox from '../ResyBox/ResyBox';
+
 import { getData } from '../apiCalls/apiCalls';
 
 import './App.css';
@@ -22,7 +24,7 @@ function App() {
 
       </div>
       <div className='resy-container'>
-        
+        <ResyBox />
       </div>
     </div>
   )
