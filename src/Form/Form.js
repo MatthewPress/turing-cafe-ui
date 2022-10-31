@@ -2,10 +2,25 @@ import React, { useState } from 'react';
 
 import './Form.css';
 
-function Form() {
+function Form({}) {
   return (
     <form>
-      <p>Hey</p>
+      <label>NAME</label>
+      <input 
+        type="text"
+      />
+      <label>NUMBER OF PEEPS</label>
+      <input 
+        type="number"
+      />
+      <label>DATE</label>
+      <input 
+        type="date"
+      />
+      <label>TIME</label>
+      <input 
+        type="time"
+      />
     </form>
   );
 }
