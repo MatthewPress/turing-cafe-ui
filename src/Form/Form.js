@@ -3,6 +3,13 @@ import React, { useState } from 'react';
 import './Form.css';
 
 function Form({}) {
+  const [values, setValues] = useState({
+    name: '',
+    numb: 0,
+    date: '',
+    time: ''
+  });
+
   return (
     <form>
       <label>NAME</label>
